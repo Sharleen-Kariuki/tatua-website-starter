@@ -1,0 +1,606 @@
+/* ==========================================================================
+   TATUA — DIRECTION B: THE KINETIC EDITORIAL (CASE STUDIES & TABLES)
+   Visual Language: Broadsheet Authority • Monumental Serif • Obsidian & Gold
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. TOKENS & SYSTEM VARIABLES
+   -------------------------------------------------------------------------- */
+   :root {
+    --bg-obsidian: #0c0e12;
+    --bg-card: #13171f;
+    --bg-card-hover: #181d27;
+    --bg-table-zebra: rgba(255, 255, 255, 0.02);
+  
+    --text-sand: #ede8df;
+    --text-muted: #9ba1ad;
+  
+    --accent-gold: #d4a359;
+    --accent-gold-hover: #e5b66e;
+    --accent-gold-subtle: rgba(212, 163, 89, 0.12);
+  
+    --border-rule: #232a3b;
+    --border-gold: rgba(212, 163, 89, 0.4);
+  
+    --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    --font-mono: "SF Mono", "Fira Code", monospace;
+  
+    --max-width: 1200px;
+  }
+  
+  /* --------------------------------------------------------------------------
+     2. GLOBAL RESET & BASELINE
+     -------------------------------------------------------------------------- */
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    background-color: var(--bg-obsidian);
+    color: var(--text-sand);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  :focus-visible {
+    outline: 2px solid var(--accent-gold);
+    outline-offset: 3px;
+  }
+  
+  /* --------------------------------------------------------------------------
+     3. BREADCRUMB NAVIGATION
+     -------------------------------------------------------------------------- */
+  nav {
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 2rem 1rem 2rem;
+    border-bottom: 1px solid var(--border-rule);
+  }
+  
+  nav ol {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  
+  nav ol li {
+    display: flex;
+    align-items: center;
+    color: var(--text-muted);
+  }
+  
+  nav ol li:not(:last-child)::after {
+    content: "→";
+    margin-left: 0.75rem;
+    color: var(--accent-gold);
+    font-family: var(--font-sans);
+  }
+  
+  nav a {
+    color: var(--text-sand);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  nav a:hover {
+    color: var(--accent-gold);
+  }
+  
+  nav li[aria-current="page"] {
+    color: var(--accent-gold);
+  }
+  
+  /* --------------------------------------------------------------------------
+     4. MAIN CANVAS & PAGE HEADER
+     -------------------------------------------------------------------------- */
+  main {
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem 6rem 2rem;
+  }
+  
+  main > header.page-header,
+  main > h1:first-of-type {
+    padding: 5rem 0 4rem 0;
+    border-bottom: 1px solid var(--border-rule);
+  }
+  
+  h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: var(--text-sand);
+    margin-bottom: 1.5rem;
+  }
+  
+  h1::after {
+    content: "EVIDENCE & IMPACT // CASE RECORDS";
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    color: var(--accent-gold);
+    margin-top: 1rem;
+  }
+  
+  .lead-subtitle,
+  main > h1 + h2 {
+    font-family: var(--font-sans);
+    font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+    font-weight: 400;
+    color: var(--accent-gold);
+    margin-bottom: 1.25rem;
+  }
+  
+  main > header.page-header p:last-of-type,
+  main > h1 + h2 + p {
+    font-size: 1.15rem;
+    line-height: 1.75;
+    color: var(--text-muted);
+    max-width: 780px;
+  }
+  
+  h2 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: var(--text-sand);
+  }
+  
+  /* --------------------------------------------------------------------------
+     5. CASE STUDIES LIST (BROADSHEET DOSSIER ARTICLES)
+     -------------------------------------------------------------------------- */
+  .case-studies-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    padding: 5rem 0;
+    border-bottom: 1px solid var(--border-rule);
+  }
+  
+  .case-study {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-rule);
+    padding: 4rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    position: relative;
+    transition: border-color 0.25s ease;
+  }
+  
+  .case-study:hover {
+    border-color: var(--border-gold);
+  }
+  
+  /* Case Study Header & Metadata */
+  .case-study-header {
+    border-bottom: 1px solid var(--border-rule);
+    padding-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 1.2fr 1.8fr;
+    gap: 2rem;
+    align-items: baseline;
+  }
+  
+  .case-study-header h2 {
+    font-size: clamp(2.25rem, 3.5vw, 3rem);
+  }
+  
+  .company-meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .company-meta dt {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent-gold);
+    margin-bottom: 0.25rem;
+  }
+  
+  .company-meta dd {
+    font-size: 0.95rem;
+    color: var(--text-sand);
+    font-weight: 500;
+  }
+  
+  /* Case Narrative (Challenge & Solution) */
+  .case-study-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  
+  .case-narrative h3 {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent-gold);
+    margin-bottom: 1rem;
+  }
+  
+  .case-narrative p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+  
+  /* Results / Metrics Grid */
+  .case-results {
+    background-color: var(--bg-obsidian);
+    border: 1px solid var(--border-rule);
+    padding: 2.5rem;
+  }
+  
+  .case-results h3 {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent-gold);
+    margin-bottom: 1.75rem;
+  }
+  
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  
+  .metric-item {
+    display: flex;
+    flex-direction: column-reverse;
+    border-left: 1px solid var(--border-rule);
+    padding-left: 1.25rem;
+  }
+  
+  .metric-item dt {
+    font-family: var(--font-sans);
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+  }
+  
+  .metric-item dd {
+    font-family: var(--font-serif);
+    font-size: 1.35rem;
+    color: var(--text-sand);
+    line-height: 1.25;
+  }
+  
+  .metric-highlight {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    color: var(--accent-gold);
+    margin-top: 0.25rem;
+  }
+  
+  /* Editorial Pull Quote */
+  .case-quote {
+    border-top: 1px solid var(--border-rule);
+    padding-top: 2rem;
+    margin: 0;
+  }
+  
+  .case-quote blockquote p {
+    font-family: var(--font-serif);
+    font-size: 1.45rem;
+    font-style: italic;
+    color: var(--text-sand);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  
+  .case-quote figcaption cite {
+    font-style: normal;
+    font-size: 0.9375rem;
+    color: var(--text-muted);
+  }
+  
+  .case-quote figcaption strong {
+    color: var(--accent-gold);
+  }
+  
+  /* --------------------------------------------------------------------------
+     6. TABLES: BROADSHEET TABULAR LEDGERS
+     -------------------------------------------------------------------------- */
+  .performance-metrics,
+  section[aria-labelledby="pricing-plans-heading"],
+  section[aria-labelledby="benchmarks-heading"] {
+    padding: 5rem 0;
+    border-bottom: 1px solid var(--border-rule);
+  }
+  
+  .performance-metrics h2,
+  section[aria-labelledby="pricing-plans-heading"] h2,
+  section[aria-labelledby="benchmarks-heading"] h2 {
+    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    margin-bottom: 2rem;
+  }
+  
+  .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid var(--border-rule);
+    background-color: var(--bg-card);
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.95rem;
+  }
+  
+  caption {
+    caption-side: top;
+    text-align: left;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent-gold);
+    padding: 1.25rem 1.5rem;
+    background-color: var(--bg-obsidian);
+    border-bottom: 1px solid var(--border-rule);
+  }
+  
+  thead th {
+    background-color: var(--bg-obsidian);
+    color: var(--text-sand);
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 2px solid var(--border-rule);
+  }
+  
+  th[scope="row"] {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    color: var(--text-sand);
+  }
+  
+  tbody td, 
+  tbody th {
+    padding: 1.15rem 1.5rem;
+    border-bottom: 1px solid var(--border-rule);
+    color: var(--text-muted);
+  }
+  
+  tbody tr:hover {
+    background-color: var(--bg-card-hover);
+  }
+  
+  tbody tr:hover td,
+  tbody tr:hover th {
+    color: var(--text-sand);
+  }
+  
+  /* Numeric alignment & accents in tables */
+  td:last-child {
+    font-family: var(--font-mono);
+    color: var(--accent-gold);
+  }
+  
+  tfoot th,
+  tfoot td {
+    padding: 1.5rem;
+    background-color: var(--bg-obsidian);
+    font-family: var(--font-mono);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+    border-top: 2px solid var(--border-rule);
+  }
+  
+  /* --------------------------------------------------------------------------
+     7. ROI CALCULATOR / METRICS SECTION
+     -------------------------------------------------------------------------- */
+  section[aria-labelledby="roi-heading"] {
+    padding: 5rem 0;
+    border-bottom: 1px solid var(--border-rule);
+  }
+  
+  section[aria-labelledby="roi-heading"] h2 {
+    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    margin-bottom: 0.75rem;
+  }
+  
+  section[aria-labelledby="roi-heading"] > p {
+    color: var(--text-muted);
+    font-size: 1.125rem;
+    margin-bottom: 3rem;
+  }
+  
+  .roi-metrics-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  
+  .roi-metric-item {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-rule);
+    padding: 2.5rem 1.75rem;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+  
+  .roi-metric-item:hover {
+    border-color: var(--border-gold);
+    transform: translateY(-3px);
+  }
+  
+  .roi-metric-item dt {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+  }
+  
+  .roi-metric-item dd {
+    font-family: var(--font-serif);
+    font-size: clamp(1.75rem, 2.8vw, 2.35rem);
+    color: var(--text-sand);
+    line-height: 1.1;
+  }
+  
+  .roi-metric-item:first-child dd,
+  .roi-metric-item:nth-child(2) dd {
+    color: var(--accent-gold);
+  }
+  
+  /* --------------------------------------------------------------------------
+     8. TESTIMONIALS SECTION (EDITORIAL PULL CARDS)
+     -------------------------------------------------------------------------- */
+  section[aria-labelledby="testimonials-heading"] {
+    padding: 5rem 0 0 0;
+    border-bottom: none;
+  }
+  
+  section[aria-labelledby="testimonials-heading"] h2 {
+    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    margin-bottom: 3.5rem;
+  }
+  
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  .testimonial-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-rule);
+    padding: 3.5rem 2rem 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+    margin: 0;
+  }
+  
+  .testimonial-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-gold);
+  }
+  
+  .testimonial-card::before {
+    content: "“";
+    position: absolute;
+    top: 1rem;
+    left: 1.75rem;
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    color: var(--accent-gold);
+    opacity: 0.4;
+    line-height: 1;
+  }
+  
+  .testimonial-card blockquote p {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: var(--text-sand);
+    margin-bottom: 2rem;
+  }
+  
+  .testimonial-card figcaption cite {
+    font-style: normal;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    display: block;
+    border-top: 1px solid var(--border-rule);
+    padding-top: 1rem;
+  }
+  
+  .testimonial-card figcaption strong {
+    color: var(--accent-gold);
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  
+  /* --------------------------------------------------------------------------
+     9. RESPONSIVE BREAKPOINTS
+     -------------------------------------------------------------------------- */
+  @media (max-width: 1024px) {
+    .case-study-header {
+      grid-template-columns: 1fr;
+    }
+    
+    .company-meta {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    .case-study-body {
+      grid-template-columns: 1fr;
+    }
+  
+    .metrics-grid,
+    .roi-metrics-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    nav {
+      padding: 1.5rem 1.25rem;
+    }
+  
+    main {
+      padding: 0 1.25rem 4rem 1.25rem;
+    }
+  
+    .case-study {
+      padding: 2.5rem 1.5rem;
+    }
+  
+    .company-meta {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  
+    .metrics-grid,
+    .roi-metrics-list {
+      grid-template-columns: 1fr;
+    }
+  }
