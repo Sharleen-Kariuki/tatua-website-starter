@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with Tatua's team. Start your free trial or schedule a demo to see how we can transform your support operations">
+    <title>Contact Us -Tatua Solutions</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Navigation breadcrumb -->
+    <nav>
+        <ol>
+            <li><a href="/">Home</a></li>
+            <li aria-current="page">Contact Us</li>
+        </ol>
+    </nav>
+
+    <main>
+        <!-- Page Header -->
+        <section aria-labelledby="contact_header">
+            <h1 id="contact_header">Get in Touch</h1>
+            <h2>Ready to transform your support operations?</h2>
+            <p>Our team is here to help you find the perfect solution for your business needs. Whether you're looking to start a trial, need technical support, or want to explore partnership opportunities, we're ready to help.</p>
+        </section>
+
+        <!-- Contact Information Section -->
+         <section aria-labelledby="company-details">
+            <div class="card">
+                <h3 id ="company-details" class="card">Company Details</h3>
+                <p>Tatua Solutions Inc.</p>
+                <p>123 Innovation Drive, Suite 400</p>
+                <p>San Francisco, CA 94107</p>
+            </div>
+
+            <div class="card">
+                <h3>Phone Numbers</h3>
+                <p><strong>Main:</strong>+1 (555) 123-4567</p>
+                <p><strong>Sales:</strong>+1 (555) 123-4568</p>
+                <p><strong>Support:</strong>+1 (555) 123-4569</p>
+            </div>
+            <div class="card">
+                <h3>Email Addresses</h3>
+                <p><strong>General Inquiries:</strong>hello@tatua.com</p>
+                <p><strong>Sales:</strong>sales@tatua.com</p>
+                <p><strong>Support:</strong>support@tatua.com</p>
+                <p><strong>Partnerships:</strong>partners@tatua.com</p>
+            </div>
+            <div class="card">
+                <h3>Business Hours</h3>
+                <p><strong>Monday - Friday:</strong>8:00 AM - 6:00 PM PST</p>
+                <p><strong>Saturday:</strong>10:00 AM - 2:00 PM PST</p>
+                <p><strong>Sunday:</strong>Closed</p>
+            </div>
+            <div>
+                <h3>Emergency Support</h3>
+                <p>24/7 emergency support available for Enterprise customers</p>
+            </div>
+         </section>
+
+         <!-- Contact Form -->
+         <form action="" method="post" class="contact-form">
+            <!-- Personal Information Fieldset -->
+            <fieldset>
+              <legend>Contact Information</legend>
+          
+              <div class="form-group">
+                <label for="full-name">Full Name <span aria-hidden="true">*</span></label>
+                <input 
+                  type="text" 
+                  id="full-name" 
+                  name="full_name" 
+                  required 
+                  minlength="2" 
+                  maxlength="50" 
+                  placeholder="Enter your full name" 
+                  autocomplete="name"
+                >
+              </div>
+          
+              <div class="form-group">
+                <label for="email-address">Email Address <span aria-hidden="true">*</span></label>
+                <input 
+                  type="email" 
+                  id="email-address" 
+                  name="email" 
+                  required 
+                  placeholder="you@company.com" 
+                  autocomplete="email"
+                >
+              </div>
+          
+              <div class="form-group">
+                <label for="company-name">Company Name <span aria-hidden="true">*</span></label>
+                <input 
+                  type="text" 
+                  id="company-name" 
+                  name="company_name" 
+                  required 
+                  minlength="2" 
+                  maxlength="100" 
+                  placeholder="Your company name" 
+                  autocomplete="organization"
+                >
+              </div>
+          
+              <div class="form-group">
+                <label for="phone-number">Phone Number (optional)</label>
+                <input 
+                  type="tel" 
+                  id="phone-number" 
+                  name="phone" 
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
+                  placeholder="123-456-7890" 
+                  autocomplete="tel"
+                >
+              </div>
+            </fieldset>
+          
+            <!-- Inquiry Details Fieldset -->
+            <fieldset>
+              <legend>Tell us about your needs</legend>
+          
+              <div class="form-group">
+                <label for="inquiry-type">Inquiry Type <span aria-hidden="true">*</span></label>
+                <select id="inquiry-type" name="inquiry_type" required>
+                  <option value="">Please select...</option>
+                  <option value="sales">Sales Inquiry</option>
+                  <option value="support">Technical Support</option>
+                  <option value="partnership">Partnership Opportunity</option>
+                  <option value="general">General Question</option>
+                  <option value="demo">Demo Request</option>
+                </select>
+              </div>
+          
+              <div class="form-group">
+                <label for="company-size">Company Size <span aria-hidden="true">*</span></label>
+                <select id="company-size" name="company_size" required>
+                  <option value="">Please select...</option>
+                  <option value="1-10">1-10 employees</option>
+                  <option value="11-50">11-50 employees</option>
+                  <option value="51-200">51-200 employees</option>
+                  <option value="201-1000">201-1000 employees</option>
+                  <option value="1000+">1000+ employees</option>
+                </select>
+              </div>
+          
+              <div class="form-group">
+                <label for="current-system">Current Ticketing System</label>
+                <select id="current-system" name="current_system">
+                  <option value="none">None currently</option>
+                  <option value="zendesk">Zendesk</option>
+                  <option value="servicenow">ServiceNow</option>
+                  <option value="freshdesk">Freshdesk</option>
+                  <option value="jira">Jira Service Management</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+          
+              <div class="form-group">
+                <label for="budget-range">Budget Range</label>
+                <select id="budget-range" name="budget_range">
+                  <option value="under-1k">Under $1,000/month</option>
+                  <option value="1k-5k">$1,000 - $5,000/month</option>
+                  <option value="5k-15k">$5,000 - $15,000/month</option>
+                  <option value="15k+">$15,000+/month</option>
+                  <option value="enterprise">Enterprise (custom pricing)</option>
+                </select>
+              </div>
+          
+              <div class="form-group">
+                <label for="timeline">Implementation Timeline</label>
+                <select id="timeline" name="timeline">
+                  <option value="immediate">Immediate (within 1 month)</option>
+                  <option value="1-3-months">1-3 months</option>
+                  <option value="3-6-months">3-6 months</option>
+                  <option value="6-plus-months">6+ months</option>
+                  <option value="exploring">Just exploring options</option>
+                </select>
+              </div>
+          
+              <div class="form-group">
+                <label for="message">Message <span aria-hidden="true">*</span></label>
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  rows="5" 
+                  required 
+                  minlength="10" 
+                  maxlength="500" 
+                  placeholder="Tell us about your current challenges and what you're looking for in a ticketing solution..."
+                ></textarea>
+              </div>
+            </fieldset>
+          
+            <!-- Preferences Fieldset -->
+            <fieldset>
+              <legend>Communication Preferences</legend>
+          
+              <!-- Radio Group: Contact Method -->
+              <fieldset class="sub-fieldset">
+                <legend>Preferred Contact Method <span aria-hidden="true">*</span></legend>
+                <div class="choice-group">
+                  <label>
+                    <input type="radio" name="contact_method" value="email" required>
+                    Email
+                  </label>
+                  <label>
+                    <input type="radio" name="contact_method" value="phone">
+                    Phone
+                  </label>
+                  <label>
+                    <input type="radio" name="contact_method" value="video">
+                    Video Call
+                  </label>
+                </div>
+              </fieldset>
+          
+              <!-- Radio Group: Best Time -->
+              <fieldset class="sub-fieldset">
+                <legend>Best Time to Contact</legend>
+                <div class="choice-group">
+                  <label>
+                    <input type="radio" name="best_time" value="morning">
+                    Morning (9 AM - 12 PM PST)
+                  </label>
+                  <label>
+                    <input type="radio" name="best_time" value="afternoon">
+                    Afternoon (12 PM - 5 PM PST)
+                  </label>
+                  <label>
+                    <input type="radio" name="best_time" value="evening">
+                    Evening (5 PM - 8 PM PST)
+                  </label>
+                </div>
+              </fieldset>
+          
+              <!-- Checkboxes -->
+              <div class="checkbox-group">
+                <label>
+                  <input type="checkbox" name="newsletter" value="yes">
+                  Yes, I'd like to receive product updates and industry insights
+                </label>
+              </div>
+          
+              <div class="checkbox-group">
+                <label>
+                  <input type="checkbox" name="terms_agreement" value="agreed" required>
+                  I agree to the Terms of Service and Privacy Policy <span aria-hidden="true">*</span>
+                </label>
+              </div>
+            </fieldset>
+          
+            <!-- Form Actions -->
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Send Message</button>
+              <button type="reset" class="btn btn-secondary">Clear Form</button>
+            </div>
+          </form>
+
+          <!-- Office Locations Section -->
+<section aria-labelledby="offices-heading">
+    <h2 id="offices-heading">Visit Our Offices</h2>
+  
+    <div class="offices-grid">
+      <!-- Primary Office -->
+      <article class="office-card" aria-labelledby="hq-title">
+        <h3 id="hq-title">San Francisco Headquarters</h3>
+        <address>
+          <p>123 Innovation Drive, Suite 400</p>
+          <p>San Francisco, CA 94105</p>
+          <p>Phone: <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+        </address>
+      </article>
+  
+      <!-- Satellite Office -->
+      <article class="office-card" aria-labelledby="ny-title">
+        <h3 id="ny-title">New York Office</h3>
+        <address>
+          <p>456 Business Plaza, Floor 12</p>
+          <p>New York, NY 10001</p>
+          <p>Phone: <a href="tel:+15551234570">+1 (555) 123-4570</a></p>
+        </address>
+      </article>
+    </div>
+  </section>
+  
+  <!-- Quick Actions Section -->
+  <section aria-labelledby="quick-actions-heading">
+    <h2 id="quick-actions-heading">Quick Actions</h2>
+  
+    <div class="actions-grid">
+      <!-- Action 1 -->
+      <article class="action-card" aria-labelledby="action-trial-title">
+        <h3 id="action-trial-title">Start Free Trial</h3>
+        <p>Get up and running in minutes with our 14-day free trial</p>
+        <a href="/signup" class="btn btn-primary">Start Free Trial</a>
+      </article>
+  
+      <!-- Action 2 -->
+      <article class="action-card" aria-labelledby="action-demo-title">
+        <h3 id="action-demo-title">Schedule Demo</h3>
+        <p>See Tatua in action with a personalized 30-minute demo</p>
+        <a href="/demo" class="btn btn-secondary">Schedule Demo</a>
+      </article>
+  
+      <!-- Action 3 -->
+      <article class="action-card" aria-labelledby="action-resources-title">
+        <h3 id="action-resources-title">Download Resources</h3>
+        <p>Access our implementation guide and best practices documentation</p>
+        <a href="/resources" class="btn btn-secondary">Download Resources</a>
+      </article>
+    </div>
+  </section>
+    </main>
+</body> 
+</html>
