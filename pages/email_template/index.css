@@ -1,0 +1,310 @@
+    /* -------------------------------------------------------------------------
+       BASE RESETS & CLIENT COMPATIBILITY
+       ------------------------------------------------------------------------- */
+    body, table, td, a {
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+    table, td {
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+    }
+    img {
+      -ms-interpolation-mode: bicubic;
+      border: 0;
+      height: auto;
+      line-height: 100%;
+      outline: none;
+      text-decoration: none;
+      display: block;
+    }
+    body {
+      height: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100% !important;
+      background-color: #0c0e12;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #ede8df;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* -------------------------------------------------------------------------
+       DIRECTION B: EDITORIAL TOKENS & STYLES (OBSIDIAN, SAND, & ACACIA GOLD)
+       ------------------------------------------------------------------------- */
+    .preheader {
+      display: none;
+      font-size: 1px;
+      color: #0c0e12;
+      line-height: 1px;
+      max-height: 0px;
+      max-width: 0px;
+      opacity: 0;
+      overflow: hidden;
+    }
+
+    /* Layout Containers */
+    .outer-wrapper {
+      table-layout: fixed;
+      background-color: #0c0e12;
+      width: 100%;
+    }
+    .wrapper-cell {
+      padding: 32px 12px;
+    }
+    .email-container {
+      max-width: 600px;
+      width: 100%;
+      background-color: #13171f;
+      border: 1px solid #232a3b;
+      overflow: hidden;
+    }
+
+    /* Header & Brand */
+    .header-cell {
+      padding: 36px 36px 24px 36px;
+      border-bottom: 1px solid #232a3b;
+      text-align: left;
+    }
+    .logo-img {
+      width: 160px;
+      max-width: 160px;
+      height: auto;
+    }
+
+    /* Typography */
+    .meta-tag {
+      font-family: "SF Mono", "Fira Code", "Courier New", monospace;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #d4a359;
+      margin-bottom: 12px;
+    }
+    .headline-cell {
+      padding: 36px 36px 16px 36px;
+    }
+    .headline {
+      margin: 0;
+      font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 34px;
+      letter-spacing: -0.02em;
+      color: #ede8df;
+      text-align: left;
+    }
+    .content-cell {
+      padding: 0 36px 28px 36px;
+    }
+    .section-title {
+      margin: 0 0 18px 0;
+      font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 26px;
+      color: #ede8df;
+    }
+    .text-lead {
+      margin: 0 0 14px 0;
+      font-size: 15px;
+      line-height: 24px;
+      color: #ede8df;
+    }
+    .text-body {
+      margin: 0;
+      font-size: 15px;
+      line-height: 24px;
+      color: #9ba1ad;
+    }
+
+    /* Getting Started / Editorial Step Panel */
+    .card-panel {
+      background-color: #0c0e12;
+      border: 1px solid #232a3b;
+      border-left: 3px solid #d4a359;
+      padding: 24px 22px;
+      width: 100%;
+    }
+    .step-num {
+      font-family: "SF Mono", "Fira Code", monospace;
+      font-size: 11px;
+      color: #d4a359;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .step-title {
+      margin: 0 0 6px 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: #ede8df;
+    }
+    .step-desc {
+      margin: 0 0 18px 0;
+      font-size: 13px;
+      line-height: 20px;
+      color: #9ba1ad;
+    }
+    .step-desc-last {
+      margin: 0;
+      font-size: 13px;
+      line-height: 20px;
+      color: #9ba1ad;
+    }
+
+    /* Actions & Buttons */
+    .actions-cell {
+      padding: 0 36px 36px 36px;
+    }
+    .btn-primary-cell {
+      background-color: #d4a359;
+      text-align: center;
+    }
+    .btn-primary-link {
+      display: inline-block;
+      padding: 14px 26px;
+      font-family: "SF Mono", "Fira Code", monospace;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #0c0e12;
+      text-decoration: none;
+    }
+    .btn-secondary-cell {
+      background-color: transparent;
+      border: 1px solid #232a3b;
+      text-align: center;
+    }
+    .btn-secondary-link {
+      display: inline-block;
+      padding: 13px 22px;
+      font-family: "SF Mono", "Fira Code", monospace;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #ede8df;
+      text-decoration: none;
+    }
+    .btn-spacer {
+      padding-right: 14px;
+    }
+
+    /* Support Module */
+    .support-cell {
+      padding: 0 36px 36px 36px;
+      border-top: 1px solid #232a3b;
+      padding-top: 32px;
+    }
+    .support-desc {
+      margin: 0 0 16px 0;
+      font-size: 14px;
+      line-height: 22px;
+      color: #9ba1ad;
+    }
+    .support-table {
+      font-size: 13px;
+      color: #9ba1ad;
+      line-height: 24px;
+      width: 100%;
+    }
+    .support-row-item {
+      padding-bottom: 6px;
+    }
+    .support-label {
+      font-family: "SF Mono", "Fira Code", monospace;
+      color: #d4a359;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .link-primary {
+      color: #ede8df;
+      text-decoration: none;
+      border-bottom: 1px solid #232a3b;
+    }
+
+    /* Closing */
+    .closing-cell {
+      padding: 0 36px 36px 36px;
+    }
+    .closing-text {
+      margin: 0;
+      font-size: 14px;
+      line-height: 22px;
+      color: #9ba1ad;
+    }
+    .closing-author {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 16px;
+      color: #ede8df;
+    }
+
+    /* Footer */
+    .footer-cell {
+      background-color: #0c0e12;
+      padding: 32px 36px;
+      border-top: 1px solid #232a3b;
+      text-align: center;
+    }
+    .footer-address {
+      margin: 0 0 14px 0;
+      font-size: 12px;
+      line-height: 20px;
+      color: #9ba1ad;
+    }
+    .footer-address strong {
+      color: #ede8df;
+      font-weight: 500;
+    }
+    .footer-socials {
+      margin: 0 0 14px 0;
+      font-family: "SF Mono", "Fira Code", monospace;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #555d6e;
+    }
+    .footer-social-link {
+      color: #d4a359;
+      text-decoration: none;
+      margin: 0 6px;
+    }
+    .footer-legal {
+      margin: 0;
+      font-size: 11px;
+      line-height: 18px;
+      color: #555d6e;
+    }
+    .footer-legal-link {
+      color: #9ba1ad;
+      text-decoration: none;
+      border-bottom: 1px solid #232a3b;
+    }
+
+    /* -------------------------------------------------------------------------
+       RESPONSIVE BREAKPOINTS
+       ------------------------------------------------------------------------- */
+    @media only screen and (max-width: 600px) {
+      .email-container {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+      .fluid-padding {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+      .mobile-button {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        margin-bottom: 12px !important;
+      }
+      .btn-spacer {
+        padding-right: 0 !important;
+      }
+    }
+ 
