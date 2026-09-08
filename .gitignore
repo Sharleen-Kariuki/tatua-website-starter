@@ -1,0 +1,12 @@
+# Environment Variables
+.env
+*.env
+
+# Maven Build Target
+target/
+email-sender/target/
+
+# IDE / OS
+.vscode/
+.idea/
+*.class
