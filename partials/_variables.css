@@ -1,0 +1,86 @@
+:root {
+  /* Dynamic Typography System */
+  --font-family-base: 'Asap', 'Lexend Decor', 'Lexend', 'Inter';
+  --font-family-heading: 'Asap', 'Lexend Deca', 'Inter';
+  --base-font-size: 1rem;
+
+  /* Dynamic Spacing System */
+  --spacing-scale: 1;
+  --section-gap: calc(3rem * var(--spacing-scale, 1));
+  --max-content-width: 75rem;
+
+  /* Dynamic Border Radius System */
+  --radius-base: 0.75rem;
+  --radius-xs: calc(var(--radius-base) * 0.35);
+  --radius-sm: calc(var(--radius-base) * 0.65);
+  --radius-md: var(--radius-base);
+  --radius-lg: calc(var(--radius-base) * 1.5);
+  --radius-xl: calc(var(--radius-base) * 2.25);
+  --radius-full: 9999rem;
+
+/* Default Theme */
+  --color-bg: #140b27;
+  --color-surface: #22123f;
+  --color-surface-hover: #311959;
+  --color-card-bg: #1d0f36;
+  --color-card-border: rgba(192, 132, 252, 0.22);
+  --text-primary: #ffffff;
+  --text-muted: #d8b4fe;
+  --text-subtle: #c084fc;
+  --accent-warm: #a855f7;
+  --accent-amber: #c084fc;
+  --accent-glow: rgba(192, 132, 252, 0.5);
+  --accent-glow-subtle: rgba(168, 85, 247, 0.22);
+
+  /* Neumorphic Shadows (Deep Violet & Vibrant Lilac) */
+  --neumorph-dark: #090412;
+  --neumorph-light: #2c164e;
+  --shadow-flat: 0.5rem 0.5rem 1.125rem var(--neumorph-dark), -0.5rem -0.5rem 1.125rem var(--neumorph-light);
+  --shadow-flat-hover: 0.625rem 0.625rem 1.375rem var(--neumorph-dark), -0.625rem -0.625rem 1.375rem var(--neumorph-light);
+  --shadow-pressed: inset 0.3125rem 0.3125rem 0.75rem var(--neumorph-dark), inset -0.3125rem -0.3125rem 0.75rem var(--neumorph-light);
+  --shadow-inset: inset 0.1875rem 0.1875rem 0.5rem var(--neumorph-dark), inset -0.1875rem -0.1875rem 0.5rem var(--neumorph-light);
+  --shadow-inset-sm: inset 0.125rem 0.125rem 0.3125rem var(--neumorph-dark), inset -0.125rem -0.125rem 0.3125rem var(--neumorph-light);
+
+  /* Transitions */
+  --transition-fast: 0.18s ease;
+  --transition-normal: 0.3s ease;
+}
+/* Theme Two */
+html[data-theme="light"] {
+  --color-bg: #fff8f2;
+  --color-surface: #ffedd5;
+  --color-surface-hover: #fed7aa;
+  --color-card-bg: #ffffff;
+  --color-card-border: rgba(249, 115, 22, 0.25);
+  --text-primary: #3d1308;
+  --text-muted: #9a3412;
+  --text-subtle: #ea580c;
+  --accent-warm: #ea580c;
+  --accent-amber: #f97316;
+  --accent-glow: rgba(249, 115, 22, 0.45);
+  --accent-glow-subtle: rgba(249, 115, 22, 0.18);
+
+  /* Neumorphism adapted for radiant orange background */
+  --neumorph-dark: #edd4c0;
+  --neumorph-light: #ffffff;
+}
+
+/* Theme Three */
+html[data-theme="blue"] {
+  --color-bg: #130a21;
+  --color-surface: #201037;
+  --color-surface-hover: #2e164f;
+  --color-card-bg: #1c0e32;
+  --color-card-border: rgba(251, 146, 60, 0.28);
+  --text-primary: #ffffff;
+  --text-muted: #e9d5ff;
+  --text-subtle: #fb923c;
+  --accent-warm: #f97316;
+  --accent-amber: #d946ef;
+  --accent-glow: rgba(249, 115, 22, 0.5);
+  --accent-glow-subtle: rgba(217, 70, 239, 0.25);
+
+  /* Neumorphism adapted for purple & orange fusion */
+  --neumorph-dark: #080310;
+  --neumorph-light: #291444;
+}

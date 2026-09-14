@@ -1,145 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Get in touch with Tatua's team. Start your free trial or schedule a demo to see how we can transform your support operations">
-    <title>Contact Us -Tatua Solutions</title>
-    <link rel="stylesheet" href="../global.css">
-    <link rel="stylesheet" href="/global.css">
-    <link rel="icon" href="/assets/tatua-favicon.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get in touch with Tatua's team. Start your free trial or schedule a demo to see how we can transform your support operations">
+  <title>Contact Us - Tatua Solutions</title>
+
+   <!-- Loads the script immediately -->
+   <script src="../theme.js" ></script>
+
+  <link rel="stylesheet" href="../partials/_variables.css">
+  <link rel="stylesheet" href="../global.css">
+  <link rel="icon" href="/assets/tatua-favicon.png" type="image/png">
+
 </head>
+
 <body>
-    <!-- Header Section -->
-    <header class="site-header">
-        <div class="header-container">
-          <a href="/" class="brand" aria-label="Tatua Home">
-            <img src="/assets/tatua-logo.png" alt="Logo" class="brand-logo" width="80" height="40">
-          </a>
-          <nav class="main-nav" aria-label="Main Navigation">
-            <ul class="nav-list">
-              <li><a href="/pages/homepage.html" class="nav-link">Home</a></li>
-              <li><a href="/pages/about.html" class="nav-link">About Us</a></li>
-              <li><a href="/pages/contact.html" class="nav-link active">Contact Us</a></li>
-              <li><a href="/pages/case_studies.html" class="nav-link">Case Studies</a></li>
-            </ul>
-          </nav>
-        </div>
-    </header>
+  <header id="header"></header>
 
-    <!-- Navigation breadcrumb -->
-    <nav aria-label="Breadcrumb">
-        <ol>
-            <li><a href="/pages/homepage.html">Home</a></li>
-            <li aria-current="page">Contact Us</li>
-        </ol>
-    </nav>
+  <!-- Navigation breadcrumb -->
+  <nav aria-label="Breadcrumb">
+    <ol>
+      <li><a href="/pages/homepage.html">Home</a></li>
+      <li aria-current="page" class="nav-link active">Contact Us</li>
+    </ol>
+  </nav>
 
-    <main>
-        <!-- Page Header -->
-        <section aria-labelledby="contact_header">
-            <h1 id="contact_header">Get in Touch</h1>
-            <h2>Ready to transform your support operations?</h2>
-            <p>Our team is here to help you find the perfect solution for your business needs. Whether you're looking to start a trial, need technical support, or want to explore partnership opportunities, we're ready to help.</p>
-        </section>
+  <main>
+    <!-- Page Header -->
+    <section aria-labelledby="contact_heading" class="contact-hero">
+      <h1 id="contact_heading">Get in Touch</h1>
+      <p>Ready to transform your support operations?</p>
+      <p class="lead">Our team is here to help you find the perfect solution for your business needs. Whether you're looking to start
+        a trial, need technical support, or want to explore partnership opportunities, we're ready to help.</p>
+    </section>
 
-        <!-- Contact Information Section -->
-         <section aria-labelledby="company-details">
-            <div class="card">
-                <h3 id ="company-details" class="card">Company Details</h3>
-                <p>Tatua Solutions Inc.</p>
-                <p>123 Innovation Drive, Suite 400</p>
-                <p>San Francisco, CA 94107</p>
-            </div>
+    <!-- Tabbed Interface -->
+    <div class="contact-tabs" id="contact-tabs">
 
-            <div class="card">
-                <h3>Phone Numbers</h3>
-                <p><strong>Main:</strong>+1 (555) 123-4567</p>
-                <p><strong>Sales:</strong>+1 (555) 123-4568</p>
-                <p><strong>Support:</strong>+1 (555) 123-4569</p>
-            </div>
-            <div class="card">
-                <h3>Email Addresses</h3>
-                <p><strong>General Inquiries:</strong>hello@tatua.com</p>
-                <p><strong>Sales:</strong>sales@tatua.com</p>
-                <p><strong>Support:</strong>support@tatua.com</p>
-                <p><strong>Partnerships:</strong>partners@tatua.com</p>
-            </div>
-            <div class="card">
-                <h3>Business Hours</h3>
-                <p><strong>Monday - Friday:</strong>8:00 AM - 6:00 PM PST</p>
-                <p><strong>Saturday:</strong>10:00 AM - 2:00 PM PST</p>
-                <p><strong>Sunday:</strong>Closed</p>
-            </div>
-            <div>
-                <h3>Emergency Support</h3>
-                <p>24/7 emergency support available for Enterprise customers</p>
-            </div>
-         </section>
+      <!-- Tab list -->
+      <div class="tab-list" role="tablist" aria-label="Contact sections">
+        <button
+          class="tab-btn active"
+          id="tab-form"
+          role="tab"
+          aria-selected="true"
+          aria-controls="panel-form"
+        >
+          
+          Send a Message
+        </button>
+        <button
+          class="tab-btn"
+          id="tab-details"
+          role="tab"
+          aria-selected="false"
+          aria-controls="panel-details"
+        >
+         
+          Contact Details
+        </button>
+        <button
+          class="tab-btn"
+          id="tab-offices"
+          role="tab"
+          aria-selected="false"
+          aria-controls="panel-offices"
+        >
+         
+          Our Offices
+        </button>
+        <button
+          class="tab-btn"
+          id="tab-actions"
+          role="tab"
+          aria-selected="false"
+          aria-controls="panel-actions"
+        >
+          Quick Actions
+        </button>
+      </div>
 
-         <!-- Contact Form -->
-         <form action="" method="post" class="contact-form">
+      <!-- ── Panel 1: Contact Form ── -->
+      <div
+        class="tab-panel active"
+        id="panel-form"
+        role="tabpanel"
+        aria-labelledby="tab-form"
+      >
+        <section aria-labelledby="form-heading">
+          <h2 id="form-heading">Send Us a Message</h2>
+
+          <form action="" method="post" class="contact-form">
             <!-- Personal Information Fieldset -->
             <fieldset>
               <legend>Contact Information</legend>
-          
               <div class="form-group">
                 <label for="full-name">Full Name <span aria-hidden="true">*</span></label>
-                <input 
-                  type="text" 
-                  id="full-name" 
-                  name="full_name" 
-                  required 
-                  minlength="2" 
-                  maxlength="50" 
-                  placeholder="Enter your full name" 
-                  autocomplete="name"
-                >
+                <input type="text" id="full-name" name="full_name" required minlength="2" maxlength="50"
+                  placeholder="Enter your full name" autocomplete="name">
               </div>
-          
+
               <div class="form-group">
                 <label for="email-address">Email Address <span aria-hidden="true">*</span></label>
-                <input 
-                  type="email" 
-                  id="email-address" 
-                  name="email" 
-                  required 
-                  placeholder="you@company.com" 
-                  autocomplete="email"
-                >
+                <input type="email" id="email-address" name="email" required placeholder="you@company.com"
+                  autocomplete="email">
               </div>
-          
+
               <div class="form-group">
                 <label for="company-name">Company Name <span aria-hidden="true">*</span></label>
-                <input 
-                  type="text" 
-                  id="company-name" 
-                  name="company_name" 
-                  required 
-                  minlength="2" 
-                  maxlength="100" 
-                  placeholder="Your company name" 
-                  autocomplete="organization"
-                >
+                <input type="text" id="company-name" name="company_name" required minlength="2" maxlength="100"
+                  placeholder="Your company name" autocomplete="organization">
               </div>
-          
+
               <div class="form-group">
                 <label for="phone-number">Phone Number (optional)</label>
-                <input 
-                  type="tel" 
-                  id="phone-number" 
-                  name="phone" 
-                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
-                  placeholder="123-456-7890" 
-                  autocomplete="tel"
-                >
+                <input type="tel" id="phone-number" name="phone" placeholder="123-456-7890" autocomplete="tel">
               </div>
             </fieldset>
-          
+
             <!-- Inquiry Details Fieldset -->
             <fieldset>
               <legend>Tell us about your needs</legend>
-          
+
               <div class="form-group">
                 <label for="inquiry-type">Inquiry Type <span aria-hidden="true">*</span></label>
                 <select id="inquiry-type" name="inquiry_type" required>
@@ -151,7 +135,7 @@
                   <option value="demo">Demo Request</option>
                 </select>
               </div>
-          
+
               <div class="form-group">
                 <label for="company-size">Company Size <span aria-hidden="true">*</span></label>
                 <select id="company-size" name="company_size" required>
@@ -163,7 +147,7 @@
                   <option value="1000+">1000+ employees</option>
                 </select>
               </div>
-          
+
               <div class="form-group">
                 <label for="current-system">Current Ticketing System</label>
                 <select id="current-system" name="current_system">
@@ -175,7 +159,7 @@
                   <option value="other">Other</option>
                 </select>
               </div>
-          
+
               <div class="form-group">
                 <label for="budget-range">Budget Range</label>
                 <select id="budget-range" name="budget_range">
@@ -186,7 +170,7 @@
                   <option value="enterprise">Enterprise (custom pricing)</option>
                 </select>
               </div>
-          
+
               <div class="form-group">
                 <label for="timeline">Implementation Timeline</label>
                 <select id="timeline" name="timeline">
@@ -197,140 +181,244 @@
                   <option value="exploring">Just exploring options</option>
                 </select>
               </div>
-          
+
               <div class="form-group">
                 <label for="message">Message <span aria-hidden="true">*</span></label>
-                <textarea 
-                  id="message" 
-                  name="message" 
-                  rows="5" 
-                  required 
-                  minlength="10" 
-                  maxlength="500" 
-                  placeholder="Tell us about your current challenges and what you're looking for in a ticketing solution..."
-                ></textarea>
+                <textarea id="message" name="message" rows="5" required minlength="10" maxlength="500"
+                  placeholder="Tell us about your current challenges and what you're looking for in a ticketing solution..."></textarea>
               </div>
             </fieldset>
-          
+
             <!-- Preferences Fieldset -->
             <fieldset>
               <legend>Communication Preferences</legend>
-          
+
               <!-- Radio Group: Contact Method -->
               <fieldset class="sub-fieldset">
                 <legend>Preferred Contact Method <span aria-hidden="true">*</span></legend>
                 <div class="choice-group">
-                  <label>
-                    <input type="radio" name="contact_method" value="email" required>
-                    Email
-                  </label>
-                  <label>
-                    <input type="radio" name="contact_method" value="phone">
-                    Phone
-                  </label>
-                  <label>
-                    <input type="radio" name="contact_method" value="video">
-                    Video Call
-                  </label>
+                  <input type="radio" id="method-email" name="contact_method" value="email" required checked>
+                  <label for="method-email">Email</label>
+
+                  <input type="radio" id="method-phone" name="contact_method" value="phone">
+                  <label for="method-phone">Phone</label>
+
+                  <input type="radio" id="method-video" name="contact_method" value="video">
+                  <label for="method-video">Video Call</label>
                 </div>
               </fieldset>
-          
+
               <!-- Radio Group: Best Time -->
               <fieldset class="sub-fieldset">
                 <legend>Best Time to Contact</legend>
                 <div class="choice-group">
-                  <label>
-                    <input type="radio" name="best_time" value="morning">
-                    Morning (9 AM - 12 PM PST)
-                  </label>
-                  <label>
-                    <input type="radio" name="best_time" value="afternoon">
-                    Afternoon (12 PM - 5 PM PST)
-                  </label>
-                  <label>
-                    <input type="radio" name="best_time" value="evening">
-                    Evening (5 PM - 8 PM PST)
-                  </label>
+                  <input type="radio" id="time-morning" name="best_time" value="morning">
+                  <label for="time-morning">Morning (9 AM - 12 PM PST)</label>
+
+                  <input type="radio" id="time-afternoon" name="best_time" value="afternoon">
+                  <label for="time-afternoon">Afternoon (12 PM - 5 PM PST)</label>
+
+                  <input type="radio" id="time-evening" name="best_time" value="evening">
+                  <label for="time-evening">Evening (5 PM - 8 PM PST)</label>
                 </div>
               </fieldset>
-          
+
               <!-- Checkboxes -->
               <div class="checkbox-group">
-                <label>
-                  <input type="checkbox" name="newsletter" value="yes">
-                  Yes, I'd like to receive product updates and industry insights
-                </label>
+                <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                <label for="newsletter">Yes, I'd like to receive product updates and industry insights</label>
               </div>
-          
+
               <div class="checkbox-group">
-                <label>
-                  <input type="checkbox" name="terms_agreement" value="agreed" required>
-                  I agree to the Terms of Service and Privacy Policy <span aria-hidden="true">*</span>
+                <input type="checkbox" id="terms" name="terms_agreement" value="agreed" required>
+                <label for="terms">
+                  I agree to the <a href="/terms" target="_blank" rel="noopener">Terms of Service</a> and <a href="/privacy" target="_blank" rel="noopener">Privacy Policy</a> <span aria-hidden="true">*</span>
                 </label>
               </div>
             </fieldset>
-          
+
             <!-- Form Actions -->
             <div class="form-actions">
               <button type="submit" class="btn btn-primary">Send Message</button>
               <button type="reset" class="btn btn-secondary">Clear Form</button>
             </div>
           </form>
+        </section>
+      </div>
 
-          <!-- Office Locations Section -->
-<section aria-labelledby="offices-heading">
-    <h2 id="offices-heading">Visit Our Offices</h2>
-  
-    <div class="offices-grid">
-      <!-- Primary Office -->
-      <article class="office-card" aria-labelledby="hq-title">
-        <h3 id="hq-title">San Francisco Headquarters</h3>
-        <address>
-          <p>123 Innovation Drive, Suite 400</p>
-          <p>San Francisco, CA 94105</p>
-          <p>Phone: <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
-        </address>
-      </article>
-  
-      <!-- Satellite Office -->
-      <article class="office-card" aria-labelledby="ny-title">
-        <h3 id="ny-title">New York Office</h3>
-        <address>
-          <p>456 Business Plaza, Floor 12</p>
-          <p>New York, NY 10001</p>
-          <p>Phone: <a href="tel:+15551234570">+1 (555) 123-4570</a></p>
-        </address>
-      </article>
-    </div>
-  </section>
-  
-  <!-- Quick Actions Section -->
-  <section aria-labelledby="quick-actions-heading">
-    <h2 id="quick-actions-heading">Quick Actions</h2>
-  
-    <div class="actions-grid">
-      <!-- Action 1 -->
-      <article class="action-card" aria-labelledby="action-trial-title">
-        <h3 id="action-trial-title">Start Free Trial</h3>
-        <p>Get up and running in minutes with our 14-day free trial</p>
-        <a href="/signup" class="btn btn-primary">Start Free Trial</a>
-      </article>
-  
-      <!-- Action 2 -->
-      <article class="action-card" aria-labelledby="action-demo-title">
-        <h3 id="action-demo-title">Schedule Demo</h3>
-        <p>See Tatua in action with a personalized 30-minute demo</p>
-        <a href="/demo" class="btn btn-secondary">Schedule Demo</a>
-      </article>
-  
-      <!-- Action 3 -->
-      <article class="action-card" aria-labelledby="action-resources-title">
-        <h3 id="action-resources-title">Download Resources</h3>
-        <p>Access our implementation guide and best practices documentation</p>
-        <a href="/resources" class="btn btn-secondary">Download Resources</a>
-      </article>
-    </div>
-  </section>
-    </main>
-</body> 
+      <!-- ── Panel 2: Contact Details ── -->
+      <div
+        class="tab-panel"
+        id="panel-details"
+        role="tabpanel"
+        aria-labelledby="tab-details"
+        hidden
+      >
+        <section aria-labelledby="company-overview-title">
+          <h2 id="company-overview-title">Contact Details &amp; Directory</h2>
+          <div class="contact-details-grid">
+            <div class="card">
+              <h3>Company Details</h3>
+              <address>
+                <p>Tatua Solutions Inc.</p>
+                <p>123 Innovation Drive, Suite 400</p>
+                <p>San Francisco, CA 94105</p>
+              </address>
+            </div>
+
+            <!-- Phone Numbers Section -->
+            <div class="card">
+              <h3>Phone Numbers</h3>
+              <p><strong>Main:</strong> <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+              <p><strong>Sales:</strong> <a href="tel:+15551234568">+1 (555) 123-4568</a></p>
+              <p><strong>Support:</strong> <a href="tel:+15551234569">+1 (555) 123-4569</a></p>
+            </div>
+
+            <!-- Email Addresses Section -->
+            <div class="card">
+              <h3>Email Addresses</h3>
+              <p><strong>General:</strong> <a href="mailto:hello@tatua.com">hello@tatua.com</a></p>
+              <p><strong>Sales:</strong> <a href="mailto:sales@tatua.com">sales@tatua.com</a></p>
+              <p><strong>Support:</strong> <a href="mailto:support@tatua.com">support@tatua.com</a></p>
+              <p><strong>Partnerships:</strong> <a href="mailto:partners@tatua.com">partners@tatua.com</a></p>
+            </div>
+
+            <!-- Business Hours Section -->
+            <div class="card">
+              <h3>Business Hours</h3>
+              <p><strong>Monday - Friday:</strong> 8:00 AM - 6:00 PM PST</p>
+              <p><strong>Saturday:</strong> 10:00 AM - 2:00 PM PST</p>
+              <p><strong>Sunday:</strong> Closed</p>
+            </div>
+
+            <!-- Emergency Support -->
+            <div class="card">
+              <h3>Emergency Support</h3>
+              <p>24/7 emergency support available for Enterprise customers</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ── Panel 3: Our Offices ── -->
+      <div
+        class="tab-panel"
+        id="panel-offices"
+        role="tabpanel"
+        aria-labelledby="tab-offices"
+        hidden
+      >
+        <section aria-labelledby="offices-heading">
+          <h2 id="offices-heading">Visit Our Offices</h2>
+
+          <div class="offices-grid">
+            <!-- Primary Office -->
+            <article class="office-card" aria-labelledby="hq-title">
+              <h3 id="hq-title">San Francisco Headquarters</h3>
+              <address>
+                <p>123 Innovation Drive, Suite 400</p>
+                <p>San Francisco, CA 94105</p>
+                <p>Phone: <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+              </address>
+            </article>
+
+            <!-- Satellite Office -->
+            <article class="office-card" aria-labelledby="ny-title">
+              <h3 id="ny-title">New York Office</h3>
+              <address>
+                <p>456 Business Plaza, Floor 12</p>
+                <p>New York, NY 10001</p>
+                <p>Phone: <a href="tel:+15551234570">+1 (555) 123-4570</a></p>
+              </address>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <!-- ── Panel 4: Quick Actions ── -->
+      <div
+        class="tab-panel"
+        id="panel-actions"
+        role="tabpanel"
+        aria-labelledby="tab-actions"
+        hidden
+      >
+        <section aria-labelledby="quick-actions-heading">
+          <h2 id="quick-actions-heading">Quick Actions</h2>
+
+          <div class="actions-grid">
+            <!-- Action 1 -->
+            <article class="action-card" aria-labelledby="action-trial-title">
+              <h3 id="action-trial-title">Start Free Trial</h3>
+              <p>Get up and running in minutes with our 14-day free trial</p>
+              <a href="/signup" class="btn btn-primary">Start Free Trial</a>
+            </article>
+
+            <!-- Action 2 -->
+            <article class="action-card" aria-labelledby="action-demo-title">
+              <h3 id="action-demo-title">Schedule Demo</h3>
+              <p>See Tatua in action with a personalized 30-minute demo</p>
+              <a href="/demo" class="btn btn-secondary">Schedule Demo</a>
+            </article>
+
+            <!-- Action 3 -->
+            <article class="action-card" aria-labelledby="action-resources-title">
+              <h3 id="action-resources-title">Download Resources</h3>
+              <p>Access our implementation guide and best practices documentation</p>
+              <a href="/resources" class="btn btn-secondary">Download Resources</a>
+            </article>
+          </div>
+        </section>
+      </div>
+
+    </div><!-- /.contact-tabs -->
+  </main>
+
+  <footer class="site-footer">
+    &copy; 2024 Tatua. All rights reserved.
+    <address>
+        <p>Email: <a href="mailto:hello@tatua.com">hello@tatua.com</a></p>
+        <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+        <p>Address: 123 Innovation Drive, Suite 400, San Francisco, CA 94105</p>
+    </address>
+  </footer>
+
+  <script>
+    // Loads the header dynamically
+    fetch('../partials/header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading header:', error));
+
+    // Tab switching
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabPanels = document.querySelectorAll('.tab-panel');
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.getAttribute('aria-controls');
+
+        // Deactivate all
+        tabBtns.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        tabPanels.forEach(p => {
+          p.classList.remove('active');
+          p.hidden = true;
+        });
+
+        // Activate selected
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+        const panel = document.getElementById(targetId);
+        panel.classList.add('active');
+        panel.hidden = false;
+      });
+    });
+  </script>
+</body>
+
 </html>

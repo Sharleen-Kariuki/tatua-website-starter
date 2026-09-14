@@ -1,146 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Learn about Tatua's mission to eliminate support chaos and meet our team of enterprise support experts.">
     <title>About Us - Tatua Solutions</title>
+
+     <!-- Loads the script immediately -->
+     <script src="../theme.js" ></script>
+    
+    <link rel="stylesheet" href="../partials/_variables.css">
     <link rel="stylesheet" href="../global.css">
-    <link rel="stylesheet" href="/global.css">
-    <link rel="icon" href="/assets/tatua-favicon.png" type="image/x-icon">
+    <link rel="icon" href="/assets/tatua-favicon.png" type="image/png">
+
+   
 </head>
+
 <body>
-    <!-- Header Section -->
-    <header class="site-header">
-        <div class="header-container">
-          <a href="/" class="brand" aria-label="Tatua Home">
-            <img src="/assets/tatua-logo.png" alt="Logo" class="brand-logo" width="80" height="40">
-          </a>
-          <nav class="main-nav" aria-label="Main Navigation">
-            <ul class="nav-list">
-              <li><a href="/pages/homepage.html" class="nav-link">Home</a></li>
-              <li><a href="/pages/about.html" class="nav-link active">About Us</a></li>
-              <li><a href="/pages/contact.html" class="nav-link">Contact Us</a></li>
-              <li><a href="/pages/case_studies.html" class="nav-link">Case Studies</a></li>
-            </ul>
-          </nav>
-        </div>
-    </header>
+    <header id="header"></header>
 
     <nav aria-label="Breadcrumb">
         <ol>
             <li><a href="/pages/homepage.html">Home</a></li>
-            <li aria-current="page">About Us</li>
+            <li aria-current="page" class="nav-link active">About Us</li>
         </ol>
     </nav>
-        <main>
 
-            <!-- Our Story -->
-            <section aria-labelledby="our_story">
-                <h1 id="our_story">Our Story</h1>
-                <p>Founded in 2020 by former enterprise support leaders, Tatua was born from frustration with outdated ticketing systems. We've processed over 2 million support tickets and helped companies reduce response times by an average of 45%.
-                    <br>
-                    After experiencing the pain of managing support operations at scale, our founders knew there had to be a better way. Traditional ticketing systems were slow, inflexible, and created more problems than they solved.</p>
+    <main>
+        <!-- Our Story -->
+        <section aria-labelledby="our_story">
+            <h1 id="our_story">Our Story</h1>
+            <p>Founded in 2020 by former enterprise support leaders, Tatua was born from frustration with outdated
+                ticketing systems. We've processed over 2 million support tickets and helped companies reduce response
+                times by an average of 45%.</p>
                 
+            <p>After experiencing the pain of managing support operations at scale, our founders knew there had to be a
+                better way. Traditional ticketing systems were slow, inflexible, and created more problems than they
+                solved.
+            </p>
+        </section>
+
+        <!-- Our Mission -->
+        <section aria-labelledby="our_mission">
+            <h2 id="our_mission">Our Mission</h2>
+            <p>To eliminate support chaos and help businesses deliver exceptional customer experiences through
+                intelligent automation and streamlined workflows.</p>
+        </section>
+
+        <!-- Team Section -->
+        <section aria-labelledby="our_team">
+            <h2 id="our_team">Meet Our Team</h2>
+            <div class="team-grid">
+                <article class="team-card" tabindex="0" aria-label="Team member card for Sarah Chen, flip to view bio">
+                    <div class="team-card-inner">
+                        <div class="team-card-front">
+                            <div class="team-avatar">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80" alt="Sarah Chen" class="avatar-img">
+                            </div>
+                            <h3>Sarah Chen</h3>
+                            <p class="role">CEO & Co-Founder</p>
+                            <div class="flip-badge"><span>Hover / Tap for Bio ↻</span></div>
+                        </div>
+                        <div class="team-card-back">
+                            <h3>Sarah Chen</h3>
+                            <p class="role-subtitle">Former Head of Support at TechCorp</p>
+                            <p class="experience"><strong>10+</strong> years in customer success</p>
+                            <p class="bio">Sarah led support teams of 50+ agents and understands the challenges of scaling customer service operations.</p>
+                            <p class="contact"><a href="mailto:sarah@tatua.com">sarah@tatua.com</a></p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="team-card" tabindex="0" aria-label="Team member card for Marcus Rodriguez, flip to view bio">
+                    <div class="team-card-inner">
+                        <div class="team-card-front">
+                            <div class="team-avatar">
+                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80" alt="Marcus Rodriguez" class="avatar-img">
+                            </div>
+                            <h3>Marcus Rodriguez</h3>
+                            <p class="role">CTO & Co-Founder</p>
+                            <div class="flip-badge"><span>Hover / Tap for Bio ↻</span></div>
+                        </div>
+                        <div class="team-card-back">
+                            <h3>Marcus Rodriguez</h3>
+                            <p class="role-subtitle">Ex-Senior Engineer at CloudScale</p>
+                            <p class="experience">Expert in distributed systems</p>
+                            <p class="bio">Marcus built high-performance systems serving millions of users and brings that expertise to support infrastructure.</p>
+                            <p class="contact"><a href="mailto:marcus@tatua.com">marcus@tatua.com</a></p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="team-card" tabindex="0" aria-label="Team member card for Jennifer Park, flip to view bio">
+                    <div class="team-card-inner">
+                        <div class="team-card-front">
+                            <div class="team-avatar">
+                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80" alt="Jennifer Park" class="avatar-img">
+                            </div>
+                            <h3>Jennifer Park</h3>
+                            <p class="role">Head of Product</p>
+                            <div class="flip-badge"><span>Hover / Tap for Bio ↻</span></div>
+                        </div>
+                        <div class="team-card-back">
+                            <h3>Jennifer Park</h3>
+                            <p class="role-subtitle">Former Product Manager at SupportFlow</p>
+                            <p class="experience">Specialist in UX design</p>
+                            <p class="bio">Jennifer designed user experiences for complex enterprise software and focuses on making support tools intuitive.</p>
+                            <p class="contact"><a href="mailto:jennifer@tatua.com">jennifer@tatua.com</a></p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="team-card" tabindex="0" aria-label="Team member card for David Kim, flip to view bio">
+                    <div class="team-card-inner">
+                        <div class="team-card-front">
+                            <div class="team-avatar">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="David Kim" class="avatar-img">
+                            </div>
+                            <h3>David Kim</h3>
+                            <p class="role">Lead Developer</p>
+                            <div class="flip-badge"><span>Hover / Tap for Bio ↻</span></div>
+                        </div>
+                        <div class="team-card-back">
+                            <h3>David Kim</h3>
+                            <p class="role-subtitle">8 years experience</p>
+                            <p class="experience">Open source contributor</p>
+                            <p class="bio">David contributes to major open source projects and ensures our platform follows industry best practices.</p>
+                            <p class="contact"><a href="mailto:david@tatua.com">david@tatua.com</a></p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+           
+
+            <!-- Company Stats Section -->
+            <section aria-labelledby="company_stats">
+                <h2 id="company_stats">By the Numbers</h2>
+                <ul class="stats-list">
+                    <li class="stat-card">
+                        <h3>Founded:</h3>
+                        <p class="stat-number">2020</p>
+                    </li>
+                    <li class="stat-card">
+                        <h3>Team Members:</h3>
+                        <p class="stat-number">25+</p>
+                    </li>
+                    <li class="stat-card">
+                        <h3>Happy Customers:</h3>
+                        <p class="stat-number">500+</p>
+                    </li>
+                    <li class="stat-card">
+                        <h3>Tickets Processed:</h3>
+                        <p class="stat-number">2M+</p>
+                    </li>
+                    <li class="stat-card">
+                        <h3>Average Resolution Improvement:</h3>
+                        <p class="stat-number">45%</p>
+                    </li>
+                    <li class="stat-card">
+                        <h3>Customer Satisfaction:</h3>
+                        <p class="stat-number">4.8/5 stars</p>
+                    </li>
+                </ul>
             </section>
 
-            <!-- Our Mission -->
-            <section aria-labelledby="our_mission">
-                <h2 id="our_mission">Our Mission</h2>
-                <p>To eliminate support chaos and help businesses deliver exceptional customer experiences through intelligent automation and streamlined workflows.</p>
+            <!-- Values Section -->
+            <section aria-labelledby="company_values">
+                <h2 id="company_values">Our Values</h2>
+                <ul class="values-list">
+                    <li class="value-card">
+                        <h3>Customer First</h3>
+                        <p>Every decision starts with how it impacts customer experience</p>
+                    </li>
+                    <li class="value-card">
+                        <h3>Transparency</h3>
+                        <p>Open communication builds trust with customers and teammates</p>
+                    </li>
+                    <li class="value-card">
+                        <h3>Innovation</h3>
+                        <p>Continuously improving to solve evolving support challenges</p>
+                    </li>
+                    <li class="value-card">
+                        <h3>Reliability</h3>
+                        <p>Building systems that work when customers need them most</p>
+                    </li>
+                </ul>
             </section>
+    </main>
 
-            <!-- Team Section -->
-            <section aria-labelledby="our_team">
-                <h2 id="our_team">Meet Our Team</h2>
-                <div class="team-grid">
-                    <article class="team-member">
-                        <h3>Sarah Chen</h3>
-                        <p>CEO & Co-Founder</p>
-                        <p>Former Head of Support at TechCorp</p>
-                        <p><strong>10+</strong> years in customer success</p>
-                        <p>sarah@tatua.com</p>
-                        <p>Sarah led support teams of 50+ agents and understands the challenges of scaling customer service operations.</p>
-                    </article>
-                    <article class="team-member">
-                        <h3>Marcus Rodriguez</h3>
-                        <p>CTO & Co-Founder</p>
-                        <p>Ex-Senior Engineer at CloudScale</p>
-                        <p>Expert in distributed systems</p>
-                        <p>marcus@tatua.com</p>
-                        <p>Marcus built high-performance systems serving millions of users and brings that expertise to support infrastructure.</p>
-                    </article>
-                    <article class="team-member">
-                        <h3>Jennifer Park</h3>
-                        <p>Head of Product</p>
-                        <p>Former Product Manager at SupportFlow  </p>
-                        <p>Specialist in UX design  </p>
-                        <p>jennifer@tatua.com</p>
-                        <p>Jennifer designed user experiences for complex enterprise software and focuses on making support tools intuitive.</p>
-                    </article>
-                    <article class="team-member">
-                        <h3>David Kim</h3>
-                        <p>Lead Developer</p>
-                        <p>Full-stack engineer, 8 years experience</p>
-                        <p>Open source contributor</p>
-                        <p>david@tatua.com</p>
-                        <p>David contributes to major open source projects and ensures our platform follows industry best practices.</p>
-                    </article>
-                </div>
+<!-- Footer Section -->
+    <footer>
+        &copy; 2024 Tatua. All rights reserved.
+        <address>
+            <p>Email: <a href="mailto:hello@tatua.com">hello@tatua.com</a></p>
+            <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+            <p>Address: 123 Innovation Drive, Suite 400, San Francisco, CA 94105</p>
+        </address>
+    </footer>
 
-                <!-- Company Stats Section -->
-                <section aria-labelledby="company_stats">
-                    <h2 id="company_stats">By the Numbers</h2>
-                    <ul class="stats-list">
-                        <li class="stat-card">
-                            <h3>Founded:</h3>
-                            <p class="stat-number">2020</p>
-                        </li>
-                        <li class="stat-card">
-                            <h3>Team Members:</h3>
-                            <p class="stat-number">25+</p>
-                        </li>
-                        <li class="stat-card">
-                            <h3>Happy Customers:</h3>
-                            <p class="stat-number">500+</p>
-                        </li>
-                        <li class="stat-card">
-                            <h3>Tickets Processed:</h3>
-                            <p class="stat-number">2M+</p>
-                        </li>
-                        <li class="stat-card">
-                            <h3>Average Resolution Improvement:</h3>
-                            <p class="stat-number">45%</p>
-                        </li>
-                        <li class="stat-card">
-                            <h3>Customer Satisfaction:</h3>
-                            <p class="stat-number">4.8/5 stars</p>
-                        </li>
-                    </ul>
-                </section>
 
-                <!-- Values Section -->
-                <section aria-labelledby="company_values">
-                    <h2 id="company_values">Our Values</h2>
-                    <ul class="values-list">
-                        <li class="value-card">
-                            <h3>Customer First</h3>
-                            <p>Every decision starts with how it impacts customer experience</p>
-                        </li>
-                        <li class="value-card">
-                            <h3>Transparency</h3>
-                            <p>Open communication builds trust with customers and teammates</p>
-                        </li>
-                        <li class="value-card">
-                            <h3>Innovation</h3>
-                            <p>Continuously improving to solve evolving support challenges</p>
-                        </li>
-                        <li class="value-card">
-                            <h3>Reliability</h3>
-                            <p>Building systems that work when customers need them most</p>
-                        </li>
-                    </ul>
-                </section>
-        </main>  
+    <script>
+        // Load the header dynamically
+        fetch('../partials/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading header:', error));
+
+        // Interactive 3D Card Flip on Click / Keypress
+        document.querySelectorAll('.team-card').forEach(card => {
+            card.addEventListener('click', (e) => {
+                if (e.target.tagName === 'A') return;
+                card.classList.toggle('flipped');
+            });
+            card.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    card.classList.toggle('flipped');
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>
