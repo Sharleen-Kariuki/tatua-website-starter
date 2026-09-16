@@ -52,86 +52,195 @@
         <section aria-labelledby="our_team">
             <h2 id="our_team">Meet Our Team</h2>
             <div class="team-grid">
-                <article class="team-card" tabindex="0" aria-label="Team member card for Sarah Chen, flip to view bio">
-                    <div class="team-card-inner">
-                        <div class="team-card-front">
-                            <div class="team-avatar">
-                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80" alt="Sarah Chen" class="avatar-img">
-                            </div>
-                            <h3>Sarah Chen</h3>
-                            <p class="role">CEO & Co-Founder</p>
-                            <div class="flip-badge"><span>Hover / Tap for Bio ↻</span></div>
-                        </div>
-                        <div class="team-card-back">
-                            <h3>Sarah Chen</h3>
-                            <p class="role-subtitle">Former Head of Support at TechCorp</p>
-                            <p class="experience"><strong>10+</strong> years in customer success</p>
-                            <p class="bio">Sarah led support teams of 50+ agents and understands the challenges of scaling customer service operations.</p>
-                            <p class="contact"><a href="mailto:sarah@tatua.com">sarah@tatua.com</a></p>
-                        </div>
+                <article class="team-card" id="card-sarah-chen" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="dialog-sarah-chen">
+                    <div class="team-avatar">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80" alt="Sarah Chen" class="avatar-img" width="96" height="96" loading="lazy">
                     </div>
+                    <h3>Sarah Chen</h3>
+                    <p class="role">CEO & Co-Founder</p>
+                    <button type="button" class="team-dialog-trigger" aria-haspopup="dialog" aria-controls="dialog-sarah-chen" data-dialog-target="dialog-sarah-chen">
+                        <span>View Bio</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                    </button>
                 </article>
 
-                <article class="team-card" tabindex="0" aria-label="Team member card for Marcus Rodriguez, flip to view bio">
-                    <div class="team-card-inner">
-                        <div class="team-card-front">
-                            <div class="team-avatar">
-                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80" alt="Marcus Rodriguez" class="avatar-img">
-                            </div>
-                            <h3>Marcus Rodriguez</h3>
-                            <p class="role">CTO & Co-Founder</p>
-                            <div class="flip-badge"><span>Hover / Tap for Bio ↻</span></div>
-                        </div>
-                        <div class="team-card-back">
-                            <h3>Marcus Rodriguez</h3>
-                            <p class="role-subtitle">Ex-Senior Engineer at CloudScale</p>
-                            <p class="experience">Expert in distributed systems</p>
-                            <p class="bio">Marcus built high-performance systems serving millions of users and brings that expertise to support infrastructure.</p>
-                            <p class="contact"><a href="mailto:marcus@tatua.com">marcus@tatua.com</a></p>
-                        </div>
+                <article class="team-card" id="card-marcus-rodriguez" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="dialog-marcus-rodriguez">
+                    <div class="team-avatar">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80" alt="Marcus Rodriguez" class="avatar-img" width="96" height="96" loading="lazy">
                     </div>
+                    <h3>Marcus Rodriguez</h3>
+                    <p class="role">CTO & Co-Founder</p>
+                    <button type="button" class="team-dialog-trigger" aria-haspopup="dialog" aria-controls="dialog-marcus-rodriguez" data-dialog-target="dialog-marcus-rodriguez">
+                        <span>View Bio</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                    </button>
                 </article>
 
-                <article class="team-card" tabindex="0" aria-label="Team member card for Jennifer Park, flip to view bio">
-                    <div class="team-card-inner">
-                        <div class="team-card-front">
-                            <div class="team-avatar">
-                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80" alt="Jennifer Park" class="avatar-img">
-                            </div>
-                            <h3>Jennifer Park</h3>
-                            <p class="role">Head of Product</p>
-                            <div class="flip-badge"><span>Hover / Tap for Bio ↻</span></div>
-                        </div>
-                        <div class="team-card-back">
-                            <h3>Jennifer Park</h3>
-                            <p class="role-subtitle">Former Product Manager at SupportFlow</p>
-                            <p class="experience">Specialist in UX design</p>
-                            <p class="bio">Jennifer designed user experiences for complex enterprise software and focuses on making support tools intuitive.</p>
-                            <p class="contact"><a href="mailto:jennifer@tatua.com">jennifer@tatua.com</a></p>
-                        </div>
+                <article class="team-card" id="card-jennifer-park" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="dialog-jennifer-park">
+                    <div class="team-avatar">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80" alt="Jennifer Park" class="avatar-img" width="96" height="96" loading="lazy">
                     </div>
+                    <h3>Jennifer Park</h3>
+                    <p class="role">Head of Product</p>
+                    <button type="button" class="team-dialog-trigger" aria-haspopup="dialog" aria-controls="dialog-jennifer-park" data-dialog-target="dialog-jennifer-park">
+                        <span>View Bio</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                    </button>
                 </article>
 
-                <article class="team-card" tabindex="0" aria-label="Team member card for David Kim, flip to view bio">
-                    <div class="team-card-inner">
-                        <div class="team-card-front">
-                            <div class="team-avatar">
-                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="David Kim" class="avatar-img">
-                            </div>
-                            <h3>David Kim</h3>
-                            <p class="role">Lead Developer</p>
-                            <div class="flip-badge"><span>Hover / Tap for Bio ↻</span></div>
-                        </div>
-                        <div class="team-card-back">
-                            <h3>David Kim</h3>
-                            <p class="role-subtitle">8 years experience</p>
-                            <p class="experience">Open source contributor</p>
-                            <p class="bio">David contributes to major open source projects and ensures our platform follows industry best practices.</p>
-                            <p class="contact"><a href="mailto:david@tatua.com">david@tatua.com</a></p>
-                        </div>
+                <article class="team-card" id="card-david-kim" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="dialog-david-kim">
+                    <div class="team-avatar">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="David Kim" class="avatar-img" width="96" height="96" loading="lazy">
                     </div>
+                    <h3>David Kim</h3>
+                    <p class="role">Lead Developer</p>
+                    <button type="button" class="team-dialog-trigger" aria-haspopup="dialog" aria-controls="dialog-david-kim" data-dialog-target="dialog-david-kim">
+                        <span>View Bio</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                    </button>
                 </article>
             </div>
+
+            <!-- Team Member Dialog Modals -->
+            <dialog class="team-dialog" id="dialog-sarah-chen" aria-labelledby="dialog-name-sarah">
+                <div class="team-dialog-content">
+                    <button type="button" class="dialog-close-btn" aria-label="Close dialog">&times;</button>
+                    <div class="dialog-header">
+                        <div class="dialog-avatar">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80" alt="Sarah Chen" class="avatar-img">
+                        </div>
+                        <div class="dialog-title-group">
+                            <h3 id="dialog-name-sarah">Sarah Chen</h3>
+                            <span class="dialog-role-badge">CEO & Co-Founder</span>
+                        </div>
+                    </div>
+                    <div class="dialog-meta">
+                        <div class="dialog-meta-item">
+                            <span class="meta-label">Background:</span>
+                            <strong>Former Head of Support at TechCorp</strong>
+                        </div>
+                        <div class="dialog-meta-item">
+                            <span class="meta-label">Experience:</span>
+                            <strong>10+ years in customer success</strong>
+                        </div>
+                    </div>
+                    <div class="dialog-body">
+                        <p class="dialog-bio">Sarah led support teams of 50+ agents and understands the challenges of scaling customer service operations.</p>
+                    </div>
+                    <div class="dialog-footer">
+                        <a href="mailto:sarah@tatua.com" class="dialog-contact-link">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                            <span>sarah@tatua.com</span>
+                        </a>
+                        <button type="button" class="dialog-secondary-close">Close</button>
+                    </div>
+                </div>
+            </dialog>
+
+            <dialog class="team-dialog" id="dialog-marcus-rodriguez" aria-labelledby="dialog-name-marcus">
+                <div class="team-dialog-content">
+                    <button type="button" class="dialog-close-btn" aria-label="Close dialog">&times;</button>
+                    <div class="dialog-header">
+                        <div class="dialog-avatar">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80" alt="Marcus Rodriguez" class="avatar-img">
+                        </div>
+                        <div class="dialog-title-group">
+                            <h3 id="dialog-name-marcus">Marcus Rodriguez</h3>
+                            <span class="dialog-role-badge">CTO & Co-Founder</span>
+                        </div>
+                    </div>
+                    <div class="dialog-meta">
+                        <div class="dialog-meta-item">
+                            <span class="meta-label">Background:</span>
+                            <strong>Ex-Senior Engineer at CloudScale</strong>
+                        </div>
+                        <div class="dialog-meta-item">
+                            <span class="meta-label">Experience:</span>
+                            <strong>Expert in distributed systems</strong>
+                        </div>
+                    </div>
+                    <div class="dialog-body">
+                        <p class="dialog-bio">Marcus built high-performance systems serving millions of users and brings that expertise to support infrastructure.</p>
+                    </div>
+                    <div class="dialog-footer">
+                        <a href="mailto:marcus@tatua.com" class="dialog-contact-link">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                            <span>marcus@tatua.com</span>
+                        </a>
+                        <button type="button" class="dialog-secondary-close">Close</button>
+                    </div>
+                </div>
+            </dialog>
+
+            <dialog class="team-dialog" id="dialog-jennifer-park" aria-labelledby="dialog-name-jennifer">
+                <div class="team-dialog-content">
+                    <button type="button" class="dialog-close-btn" aria-label="Close dialog">&times;</button>
+                    <div class="dialog-header">
+                        <div class="dialog-avatar">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80" alt="Jennifer Park" class="avatar-img">
+                        </div>
+                        <div class="dialog-title-group">
+                            <h3 id="dialog-name-jennifer">Jennifer Park</h3>
+                            <span class="dialog-role-badge">Head of Product</span>
+                        </div>
+                    </div>
+                    <div class="dialog-meta">
+                        <div class="dialog-meta-item">
+                            <span class="meta-label">Background:</span>
+                            <strong>Former Product Manager at SupportFlow</strong>
+                        </div>
+                        <div class="dialog-meta-item">
+                            <span class="meta-label">Experience:</span>
+                            <strong>Specialist in UX design</strong>
+                        </div>
+                    </div>
+                    <div class="dialog-body">
+                        <p class="dialog-bio">Jennifer designed user experiences for complex enterprise software and focuses on making support tools intuitive.</p>
+                    </div>
+                    <div class="dialog-footer">
+                        <a href="mailto:jennifer@tatua.com" class="dialog-contact-link">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                            <span>jennifer@tatua.com</span>
+                        </a>
+                        <button type="button" class="dialog-secondary-close">Close</button>
+                    </div>
+                </div>
+            </dialog>
+
+            <dialog class="team-dialog" id="dialog-david-kim" aria-labelledby="dialog-name-david">
+                <div class="team-dialog-content">
+                    <button type="button" class="dialog-close-btn" aria-label="Close dialog">&times;</button>
+                    <div class="dialog-header">
+                        <div class="dialog-avatar">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="David Kim" class="avatar-img">
+                        </div>
+                        <div class="dialog-title-group">
+                            <h3 id="dialog-name-david">David Kim</h3>
+                            <span class="dialog-role-badge">Lead Developer</span>
+                        </div>
+                    </div>
+                    <div class="dialog-meta">
+                        <div class="dialog-meta-item">
+                            <span class="meta-label">Background:</span>
+                            <strong>Full-stack engineer, 8 years experience</strong>
+                        </div>
+                        <div class="dialog-meta-item">
+                            <span class="meta-label">Experience:</span>
+                            <strong>Open source contributor</strong>
+                        </div>
+                    </div>
+                    <div class="dialog-body">
+                        <p class="dialog-bio">David contributes to major open source projects and ensures our platform follows industry best practices.</p>
+                    </div>
+                    <div class="dialog-footer">
+                        <a href="mailto:david@tatua.com" class="dialog-contact-link">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                            <span>david@tatua.com</span>
+                        </a>
+                        <button type="button" class="dialog-secondary-close">Close</button>
+                    </div>
+                </div>
+            </dialog>
         </section>
            
 
@@ -210,16 +319,62 @@
             })
             .catch(error => console.error('Error loading header:', error));
 
-        // Interactive 3D Card Flip on Click / Keypress
+        // Team Member Dialog Interaction
+        function openTeamDialog(dialogId, triggerEl) {
+            const dialog = document.getElementById(dialogId);
+            if (dialog && typeof dialog.showModal === 'function') {
+                dialog._returnFocusElement = triggerEl;
+                dialog.showModal();
+            }
+        }
+
+        // Open dialog on button click or card click / Enter key
         document.querySelectorAll('.team-card').forEach(card => {
-            card.addEventListener('click', (e) => {
-                if (e.target.tagName === 'A') return;
-                card.classList.toggle('flipped');
+            const trigger = card.querySelector('.team-dialog-trigger');
+            const dialogId = trigger ? trigger.getAttribute('data-dialog-target') : null;
+            if (!dialogId) return;
+
+            // Trigger button click
+            trigger.addEventListener('click', (e) => {
+                e.stopPropagation();
+                openTeamDialog(dialogId, trigger);
             });
+
+            // Card click (anywhere on the card)
+            card.addEventListener('click', (e) => {
+                if (e.target.closest('a') || e.target.closest('button')) return;
+                openTeamDialog(dialogId, card);
+            });
+
+            // Keyboard activation (Enter / Space on card)
             card.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
+                if (e.target === card && (e.key === 'Enter' || e.key === ' ')) {
                     e.preventDefault();
-                    card.classList.toggle('flipped');
+                    openTeamDialog(dialogId, card);
+                }
+            });
+        });
+
+        // Close handlers for dialogs
+        document.querySelectorAll('dialog.team-dialog').forEach(dialog => {
+            // Close buttons inside dialog
+            dialog.querySelectorAll('.dialog-close-btn, .dialog-secondary-close').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    dialog.close();
+                });
+            });
+
+            // Click outside dialog content (on backdrop)
+            dialog.addEventListener('click', (e) => {
+                if (e.target === dialog) {
+                    dialog.close();
+                }
+            });
+
+            // Restore focus when dialog closes
+            dialog.addEventListener('close', () => {
+                if (dialog._returnFocusElement && typeof dialog._returnFocusElement.focus === 'function') {
+                    dialog._returnFocusElement.focus();
                 }
             });
         });
