@@ -1,9 +1,36 @@
+@font-face {
+  font-family: 'Asap';
+  src: url('../fonts/Asap/Asap-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Second Font Family */
+@font-face {
+  font-family: 'Lexend Deca';
+  src: url('../fonts/lexand/LexendDeca-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Third Font Family */
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter/Inter-Italic-VariableFont_opsz\,wght.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* Dynamic Typography System */
-  --font-family-base: 'Asap', 'Lexend Deca', 'Lexend', 'Inter', sans-serif;
-  --font-family-heading: 'Asap', 'Lexend Deca', 'Inter', sans-serif;
+  --font-family-base: 'Asap', 'Lexend Deca', 'Inter';
+  --font-family-heading: 'Asap', 'Lexend Deca', 'Inter';
   --base-font-size: 1rem;
-
+  
   /* Dynamic Spacing System */
   --spacing-scale: 1;
   --section-gap: calc(3rem * var(--spacing-scale, 1));
