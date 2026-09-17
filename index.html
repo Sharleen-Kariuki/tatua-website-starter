@@ -7,19 +7,21 @@
     <title>Tatua - Enterprise Ticketing Solutions</title>
     
     <!-- Loads the script immediately -->
-    <script src="../theme.js" ></script>
+    <script src="./theme.js"></script>
 
     <!-- Preloads Styles -->
-    <link rel="stylesheet" href="../partials/_variables.css">
-    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="./partials/_variables.css">
+    <link rel="stylesheet" href="./global.css">
     <link rel="icon" href="/assets/tatua-favicon.png" type="image/png">
 
-  
+
 </head>
 
 <body>
+    <!-- Accessible Skip Link -->
+    <a class="skip-link" href="#main">Skip to main content</a>
     <header id="header"></header>
-    <main>
+    <main id="main" tabindex="-1">
         <!-- Hero Section -->
         <section aria-labelledby="hero-title">
             <h1 id="hero-title">Streamline Your Support Operations</h1>
@@ -87,12 +89,15 @@
 
     <script>
         // Load the header dynamically
-        fetch('../partials/header.html')
-          .then(response => response.text())
+        fetch('./partials/header.html')
+          .then(response => {
+            if (!response.ok) return fetch('/partials/header.html').then(r => r.text());
+            return response.text();
+          })
           .then(data => {
             document.getElementById('header').innerHTML = data;
           })
           .catch(error => console.error('Error loading header:', error));
-      </script>
+    </script>
 </body>
 </html>

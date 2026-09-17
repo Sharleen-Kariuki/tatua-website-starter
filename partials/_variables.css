@@ -1,7 +1,7 @@
 :root {
   /* Dynamic Typography System */
-  --font-family-base: 'Asap', 'Lexend Decor', 'Lexend', 'Inter';
-  --font-family-heading: 'Asap', 'Lexend Deca', 'Inter';
+  --font-family-base: 'Asap', 'Lexend Deca', 'Lexend', 'Inter', sans-serif;
+  --font-family-heading: 'Asap', 'Lexend Deca', 'Inter', sans-serif;
   --base-font-size: 1rem;
 
   /* Dynamic Spacing System */
@@ -18,17 +18,27 @@
   --radius-xl: calc(var(--radius-base) * 2.25);
   --radius-full: 9999rem;
 
-/* Default Theme */
+  /* Touch & Pointer Accessibility Dimensions (Min 44x44px target sizes) */
+  --touch-target-min: 2.75rem;
+  --touch-target-padding: 0.75rem 1.25rem;
+
+  /* Focus Indicator System (WCAG 2.4.7 / 2.4.11 compliant) */
+  --focus-ring-width: 0.1875rem;
+  --focus-ring-offset: 0.1875rem;
+  --focus-ring-color: #f0abfc;
+  --focus-ring-bg: #140b27;
+
+  /* Default Theme (Vibrant Purple - High Contrast Dark Mode) */
   --color-bg: #140b27;
   --color-surface: #22123f;
   --color-surface-hover: #311959;
   --color-card-bg: #1d0f36;
-  --color-card-border: rgba(192, 132, 252, 0.22);
+  --color-card-border: rgba(216, 180, 254, 0.35);
   --text-primary: #ffffff;
-  --text-muted: #d8b4fe;
-  --text-subtle: #c084fc;
-  --accent-warm: #a855f7;
-  --accent-amber: #c084fc;
+  --text-muted: #e9d5ff;
+  --text-subtle: #d8b4fe;
+  --accent-warm: #c084fc;
+  --accent-amber: #e0aaff;
   --accent-glow: rgba(192, 132, 252, 0.5);
   --accent-glow-subtle: rgba(168, 85, 247, 0.22);
 
@@ -45,42 +55,88 @@
   --transition-fast: 0.18s ease;
   --transition-normal: 0.3s ease;
 }
-/* Theme Two */
+
+/* Theme Two: Radiant Orange (High Contrast Light Mode) */
 html[data-theme="light"] {
   --color-bg: #fff8f2;
   --color-surface: #ffedd5;
   --color-surface-hover: #fed7aa;
   --color-card-bg: #ffffff;
-  --color-card-border: rgba(249, 115, 22, 0.25);
-  --text-primary: #3d1308;
-  --text-muted: #9a3412;
-  --text-subtle: #ea580c;
-  --accent-warm: #ea580c;
-  --accent-amber: #f97316;
-  --accent-glow: rgba(249, 115, 22, 0.45);
-  --accent-glow-subtle: rgba(249, 115, 22, 0.18);
+  --color-card-border: rgba(154, 52, 18, 0.32);
+  --text-primary: #2c0d05;
+  --text-muted: #6c2710;
+  --text-subtle: #8a2e0e;
+  --accent-warm: #9a3412;
+  --accent-amber: #b43403;
+  --accent-glow: rgba(180, 52, 3, 0.4);
+  --accent-glow-subtle: rgba(180, 52, 3, 0.15);
+  --focus-ring-color: #7c2d12;
+  --focus-ring-bg: #ffffff;
 
   /* Neumorphism adapted for radiant orange background */
   --neumorph-dark: #edd4c0;
   --neumorph-light: #ffffff;
 }
 
-/* Theme Three */
+/* Theme Three: Purple & Orange Fusion (High Contrast Dark Mode) */
 html[data-theme="blue"] {
   --color-bg: #130a21;
   --color-surface: #201037;
   --color-surface-hover: #2e164f;
   --color-card-bg: #1c0e32;
-  --color-card-border: rgba(251, 146, 60, 0.28);
+  --color-card-border: rgba(251, 146, 60, 0.38);
   --text-primary: #ffffff;
-  --text-muted: #e9d5ff;
-  --text-subtle: #fb923c;
-  --accent-warm: #f97316;
-  --accent-amber: #d946ef;
+  --text-muted: #f3e8ff;
+  --text-subtle: #fed7aa;
+  --accent-warm: #fb923c;
+  --accent-amber: #f0abfc;
   --accent-glow: rgba(249, 115, 22, 0.5);
   --accent-glow-subtle: rgba(217, 70, 239, 0.25);
+  --focus-ring-color: #fed7aa;
+  --focus-ring-bg: #130a21;
 
   /* Neumorphism adapted for purple & orange fusion */
   --neumorph-dark: #080310;
   --neumorph-light: #291444;
+}
+
+/* Theme Four: High Contrast Mode (WCAG AAA 15:1+ Contrast) */
+html[data-theme="contrast"] {
+  --color-bg: #000000;
+  --color-surface: #121212;
+  --color-surface-hover: #222222;
+  --color-card-bg: #0a0a0a;
+  --color-card-border: #ffff00;
+  --text-primary: #ffffff;
+  --text-muted: #ffffff;
+  --text-subtle: #00ffff;
+  --accent-warm: #ffff00;
+  --accent-amber: #ffff00;
+  --accent-glow: rgba(255, 255, 0, 0.6);
+  --accent-glow-subtle: rgba(255, 255, 0, 0.3);
+  --focus-ring-color: #00ffff;
+  --focus-ring-bg: #000000;
+
+  --neumorph-dark: #000000;
+  --neumorph-light: #262626;
+  --shadow-flat: 0 0 0 0.125rem #ffff00;
+  --shadow-flat-hover: 0 0 0 0.1875rem #ffff00;
+  --shadow-pressed: 0 0 0 0.125rem #00ffff;
+  --shadow-inset: 0 0 0 0.0625rem #ffff00;
+  --shadow-inset-sm: 0 0 0 0.0625rem #ffff00;
+}
+
+/* System Preference: High Contrast Support */
+@media (prefers-contrast: more) {
+  :root {
+    --color-card-border: currentColor;
+    --focus-ring-width: 0.25rem;
+  }
+
+  .card,
+  article.card,
+  .btn,
+  .nav-link {
+    border-width: 0.125rem !important;
+  }
 }

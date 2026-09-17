@@ -23,18 +23,20 @@
 </head>
 
 <body>
+    <!-- Accessible Skip Link -->
+    <a class="skip-link" href="#main">Skip to main content</a>
     <header id="header" class="site-header"></header>
 
     <!-- Navigation Breadcrumb -->
     <nav aria-label="Breadcrumb" class="breadcrumbs">
         <ol>
-            <li><a href="/pages/homepage.html">Home</a></li>
+            <li><a href="/index.html">Home</a></li>
             <li aria-current="page" class="nav-link active">Settings</li>
         </ol>
     </nav>
 
     <!-- Main Content -->
-    <main id="main-content">
+    <main id="main" tabindex="-1">
         <!-- Page Header -->
         <header class="page-header">
             <p class="lead-subtitle">System Appearance & Preferences</p>
@@ -43,15 +45,21 @@
         </header>
 
         <div class="settings-container">
-            <!-- Settings Controls Grid -->
+            <!-- Settings Card Grid -->
             <div class="settings-grid">
                 
                 <!-- 1. Theme Selection Card -->
                 <article class="setting-card" aria-labelledby="theme-heading">
-                    <header class="setting-header">
-                        <div class="setting-title-group">
-                            <h2 id="theme-heading">Color Theme</h2>
-                            <p class="setting-description">Select your preferred lighting and anti-glare profile.</p>
+                    <header class="setting-card-header">
+                        <div class="setting-icon-wrapper" aria-hidden="true">
+                            <svg class="setting-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h2 id="theme-heading" class="setting-title">Color Theme</h2>
+                            <p class="setting-description">Select your preferred color scheme across the application.</p>
                         </div>
                     </header>
                     
@@ -67,6 +75,10 @@
                         <button type="button" class="theme-btn" data-theme-value="blue" aria-pressed="false">
                             <span class="theme-color-swatch swatch-blue" aria-hidden="true"></span>
                             <span>Purple &amp; Orange</span>
+                        </button>
+                        <button type="button" class="theme-btn" data-theme-value="contrast" aria-pressed="false">
+                            <span class="theme-color-swatch swatch-contrast" aria-hidden="true"></span>
+                            <span>High Contrast</span>
                         </button>
                     </div>
                 </article>

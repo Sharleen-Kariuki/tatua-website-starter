@@ -113,6 +113,10 @@ document.addEventListener('DOMContentLoaded', () => {
               <span class="theme-color-swatch swatch-blue"></span>
               <span>Purple &amp; Orange</span>
             </button>
+            <button type="button" class="theme-btn" data-theme-value="contrast" aria-label="High Contrast Theme">
+              <span class="theme-color-swatch swatch-contrast"></span>
+              <span>High Contrast</span>
+            </button>
           </div>
         </section>
 
